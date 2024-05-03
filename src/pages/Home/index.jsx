@@ -25,11 +25,13 @@ const Home = (props) => {
   const navigate = useNavigate();
   const { currency } = useCurrency();
 
-  async function getData(currentPage, currency) {
+  async function getData(currentPage, currence) {
     setLoading(true);
+    console.log(29, currence);
+
     try {
       const resp = await fetch(
-        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=gecko_desc&per_page=10&page=${currentPage}&sparkline=false&price_change_percentage=24h`
+        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currence}&order=gecko_desc&per_page=10&page=${currentPage}&sparkline=false&price_change_percentage=24h`
       );
       const data = await resp.json();
       setData(data);
@@ -57,7 +59,6 @@ const Home = (props) => {
   }, [currentPage, currency]);
 
   function handleChange(newPage) {
-    e.defaultValue()
     setCurrentPage(newPage);
   }
 
@@ -112,7 +113,6 @@ const Home = (props) => {
                   loop={true}
                   slideToClickedSlide={true}
                   spaceBetween={30}
-                  // centeredSlides={true}
                   autoplay={{
                     delay: 2000,
                     disableOnInteraction: false,

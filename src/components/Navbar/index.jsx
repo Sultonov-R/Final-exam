@@ -8,6 +8,7 @@ const Navbar = () => {
   const { currency, handleChangeCurrency } = useCurrency();
   const [isModal, setIsModal] = useState(false);
   const [items, setItems] = useState([]);
+  const [cur, setCur] = useState('USD')
 
   function handleBtnClick() {
     setIsModal(true);
@@ -34,6 +35,12 @@ const Navbar = () => {
     localStorage.setItem("locals", JSON.stringify(updatedItems));
   }
 
+  useEffect(()=>{
+     const el = localStorage.getItem('currency')?JSON.parse(localStorage.getItem('currency')):[]
+     setCur(el)
+  },[])
+
+
   return (
     <div className="navbar">
       <div className="container">
@@ -44,7 +51,7 @@ const Navbar = () => {
         </div>
 
         <div className="select-watch-class">
-          <select onChange={(e) => handleChangeCurrency(e.target.value)}>
+          <select value={cur} onChange={(e) => handleChangeCurrency(e.target.value)}>
             <option value="USD">USD</option>
             <option value="EUR">EURO</option>
             <option value="JPY">JPY</option>
