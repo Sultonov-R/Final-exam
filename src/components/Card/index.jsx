@@ -16,7 +16,7 @@ const Card = (props) => {
       <span>
         {symbol} <span className="amount">{amount}</span>
       </span>
-      <p>{price}</p>
+      <p><span>₹ </span>{price}</p>
     </div>
   );
 };
