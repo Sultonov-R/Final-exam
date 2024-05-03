@@ -23,6 +23,7 @@
     color: #ffffff;
     padding: 5px;
     border: none;
+    cursor: pointer;
 }
 
 .select-watch-class select:focus {

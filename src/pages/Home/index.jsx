@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import Navbar from "../../components/Navbar";
-import { Pagination } from "@mui/material";
+import { Pagination, Stack } from "@mui/material";
 import Card from "../../components/Card";
 import "./index.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -57,6 +57,7 @@ const Home = (props) => {
   }, [currentPage, currency]);
 
   function handleChange(newPage) {
+    e.defaultValue()
     setCurrentPage(newPage);
   }
 
@@ -224,11 +225,13 @@ const Home = (props) => {
                     })}
                 </tbody>
               </table>
-              <Pagination
-                onChange={(event, page) => handleChange(page)}
-                className="pagination"
-                count={10}
-              />
+              <Stack spacing={2}>
+                <Pagination
+                  onChange={(event, page) => handleChange(page)}
+                  className="pagination"
+                  count={10}
+                />
+              </Stack>
             </div>
           </div>
         </div>
