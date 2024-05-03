@@ -1,0 +1,97 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.select-watch-class {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+}
+
+.select-watch-class select {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 5px;
+    border: none;
+}
+
+.select-watch-class select:focus {
+    outline: none;
+}
+
+.select-watch-class select option {
+    background-color: #14161A;
+    padding: 4px 0px;
+}
+
+.select-watch-class button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #87CEEB;
+    font-weight: 500;
+    line-height: 24px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.select-watch-class button:hover {
+    background-color: #ffffff;
+    color: #87CEEB;
+    transition: all 0.3s;
+}
+.cancel{
+    position: absolute;
+    right: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 20px;
+    background-color:#ff005d;
+    padding:4px 12px;
+    border-radius:6px;
+}
+
+.watch-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #515151;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px 12px;
+    z-index: 999;
+
+}
+
+.watch-list h2 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 24.5px;
+    letter-spacing: 0.4000000059604645px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 15px;
+}
+
+.watch-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
